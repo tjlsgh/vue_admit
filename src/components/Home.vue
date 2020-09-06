@@ -1,6 +1,6 @@
 <template>
   <div>
-    你好
+    你好Home
     <el-button type="info" @click="logout">退出</el-button>
   </div>
 </template>
