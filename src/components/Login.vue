@@ -89,9 +89,7 @@ export default {
   background-color: transparent;
   background-clip: padding-box;
   margin: 10px auto;
-  //width: 450px;
   padding: 35px 35px 15px 35px;
-  /*background: rgba(191, 184, 184, 30);*/
   border: 1px solid #151414;
   box-shadow: aliceblue;
 }
