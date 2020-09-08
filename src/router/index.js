@@ -2,7 +2,9 @@ import Router from 'vue-router'
 import Vue from 'vue'
 import Login from '../components/Login'
 import Home from '../components/Home'
-
+import Welcome from '../components/admin/Welcome'
+import Users from '../components/admin/user/Users'
+import Roles from '../components/admin/user/Roles'
 Vue.use(Router)
 
 const router = new Router({
@@ -10,7 +12,15 @@ const router = new Router({
   routes: [
     {path: '/', redirect: '/login'},
     {path: '/login', name: 'Login', component: Login},
-    {path: '/home', name: 'Home', component: Home}
+    {path: '/home',
+      name: 'Home',
+      component: Home,
+      redirect: '/welcome',
+      children: [
+        {path: '/welcome', name: 'Welcome', component: Welcome},
+        {path: '/users', name: 'Users', component: Users},
+        {path: '/roles', name: 'Roles', component: Roles}
+      ]}
   ]
 })
 // 路由挂载导航守卫
