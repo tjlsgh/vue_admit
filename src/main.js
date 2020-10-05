@@ -10,6 +10,7 @@ import axios from 'axios'
 // 配置 axios url http://www.ysqorz.top:8888/api/private/v1/login
 Vue.prototype.$http = axios
 axios.defaults.baseURL = 'http://www.ysqorz.top:8888/api/private/v1'
+// axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1'
 axios.interceptors.request.use(config => {
   config.headers.Authorization = window.sessionStorage.getItem('token')
   return config
